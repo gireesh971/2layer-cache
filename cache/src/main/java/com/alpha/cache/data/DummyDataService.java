@@ -8,7 +8,7 @@ public class DummyDataService implements IService {
 	public Object get(String key) {
 		// Error handling is an interesting question here.
 		// We can assume that it return null for error
-		return null;
+		return "Dummy data for key: " + key;
 	}
 
 	public void put(String key, Object value) {

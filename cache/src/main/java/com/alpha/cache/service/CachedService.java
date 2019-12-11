@@ -23,13 +23,11 @@ public class CachedService implements IService {
 		// 3. Synchronization can be done for the operation #2
 		// 4. These are optimization that goes along with the synchronization characteristics of cache
 		Object result = cache.get(key);
-		{
-			// synchronize on cache
-			if (result == null) {
-				result = service.get(key);
-				if (result != null) {
-					cache.put(key, result);
-				}
+		if (result == null) {
+			//synchronization needed
+			result = service.get(key);
+			if (result != null) {
+				cache.put(key, result);
 			}
 		}
 		return result;

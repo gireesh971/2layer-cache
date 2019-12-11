@@ -9,5 +9,4 @@ class CacheApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }

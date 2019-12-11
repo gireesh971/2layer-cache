@@ -12,7 +12,7 @@ import com.alpha.cache.data.IService;
 
 @RestController
 public class ServiceController {
-	
+
 	@Autowired
 	@Qualifier("cachedService")
 	private IService service;
